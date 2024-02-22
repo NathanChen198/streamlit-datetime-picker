@@ -1,0 +1,1 @@
+recursive-include streamlit_datetime_picker/frontend/build *
