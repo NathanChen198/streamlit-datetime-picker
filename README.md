@@ -100,6 +100,7 @@ Custom format can be set. Format string syntax can reference in [dayjs documenta
 ``` python
 dt = date_time_picker(format='DD-MMM-YYYY HH:mm:ss')
 ```
+![fomat_image](/images/customformat.png)
 
 ### Allow Clear
 `allowClear=False` will not allow user to clear the date and time value.
@@ -132,10 +133,25 @@ start, end = date_range_picker(value=(nowVal-timedelta(1), now()), presets=[Pres
 ```
 
 ### Customize User Interface
-**Size**: The input box comes in three sizes. `middle`, `small` and `large` are avaliable.
-**Variant**: There are `outlined`, `filled` and `borderless` variants to choose from.
-**Status**: status could be `error` or `warning`
+**Size**: The input box comes in three sizes. `middle`, `small` and `large` are avaliable.\
+![Size_image](/images/size.png)
 
+**Variant**: There are `outlined`, `filled` and `borderless` variants to choose from.\
+![Variant_image](/images/variants.PNG)
+
+**Status**: status could be `error` or `warning`.\
+![Status_image](/images/status.PNG)
+
+
+## Add to streamlit Containers
+You can add to other different streamlit container.
+``` python
+col1, col2 = st.columns([1, 2])
+with col1:
+    dt = date_time_picker(picker='week')
+with col2:
+    start, end = date_range_picker()
+```
 
 
 [pypi_badge]: https://img.shields.io/pypi/v/streamlit-datetime-picker.svg
